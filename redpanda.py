@@ -13,8 +13,7 @@ def create_app():
 		'DEBUG': bool,
 		'TESTING': bool
 	})
-	mail = Mail(app)
-	mail.init_app(app)
+
 
 	@app.route("/", methods=['GET', 'POST'])
 	def index():
@@ -30,14 +29,14 @@ def create_app():
 		"""
 		Render the view of error 404 page
 		"""
-		return render_template('404.html', title='TSM not found', current_page='404')
+		return render_template('404.html', title='RedPanda not found', current_page='404')
 
 	@app.errorhandler(500)
 	def internal_server_error(err):
 		"""
 		Render the view of error 500 page
 		"""
-		return render_template('500.html', title='TSM internal server error', current_page='500')
+		return render_template('500.html', title='RedPanda internal server error', current_page='500')
 
 
 	return app
