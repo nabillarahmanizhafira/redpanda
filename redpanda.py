@@ -5,6 +5,7 @@ from flask import request
 from flask import url_for
 from flask_dotenv import DotEnv
 
+
 def create_app():
 	env = DotEnv()
 	app = Flask(__name__)
