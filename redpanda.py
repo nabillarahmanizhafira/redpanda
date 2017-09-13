@@ -38,6 +38,14 @@ def create_app():
 		"""
 		return render_template('500.html', title='RedPanda internal server error', current_page='500')
 
+	@app.route("/gallery", methods=["GET"])
+	def gallery():
+		return render_template('gallery.html', title='Gallery', current_page='Gallery')
+
+	@app.route("/reproduction", methods=["GET"])
+	def reproduction():
+		return render_template('reproduction.html', title='Gallery', current_page='Reproduction')
+
 
 	return app
 
