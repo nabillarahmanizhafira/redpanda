@@ -1,6 +1,6 @@
-import tsm
+import redpanda
 
-app = tsm.create_app()
+app = redpanda.create_app()
 
 if __name__ == "__main__":
     app.run()
