@@ -21,7 +21,7 @@ def create_app():
 			Render the view of index page.
 		"""
 
-		return render_template('index.html', title='RedPanda', current_page='RedPanda', form=form)
+		return render_template('index.html', title='RedPanda', current_page='RedPanda')
 
 
 	@app.errorhandler(404)

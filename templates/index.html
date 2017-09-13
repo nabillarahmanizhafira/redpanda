@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Tri Sinergi Mitra</title>
-	<meta name="author" content="NRZ & CG" />
-	<meta name="description" content="TSM" />
-	<meta name="keywords"  content="TSM,hamzah,badeges,tax,consulting,accountant,solution,Tri,Sinergi,Mitra,accounting"/>
+	<title>RedPanda</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content=""/>
 	<meta name="Resource-type" content="Document"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
@@ -18,60 +18,7 @@
 	
 </head>
 <body>
-	<div id="loading">
-		<img src="{{url_for('static', filename='img/TriSinergiMitra.png') }}"" alt="logo" class="logo" />
-		<img class="gif" src="{{url_for('static', filename='img/ring-alt.gif') }}"" alt="loading" />
-	</div>
-	<div id="container_page">
-		<ul id="menu">
-				<li data-menuanchor="home"><a href="#home">Home</a></li>
-				<li data-menuanchor="about_us"><a href="#about_us">About</a></li>
-				<li data-menuanchor="our_services"><a href="#our_services">Our Services</a></li>
-				<li data-menuanchor="gallery"><a href="#gallery">Gallery</a></li>
-				<li data-menuanchor="contact_us"><a href="#contact_us">Contact Us</a></li>
-		</ul>
-		
-		<div id="fullpage">	
-			<div class="section" id="section1">
-				<img src="{{url_for('static', filename='img/TriSinergiMitra.png') }}"" alt="logo"/>
-				<h2>
-					Quality, Trust, and Expertise.
-				</h2>
-
-			</div>
-
-			<div class="section" id="section2">
-				<h2>TSM atau Tri Sinergi Mitra adalah sebuah perusahaan bisnis konsultan.</h2>
-			</div>
-			
-			<div class="section">
-				<h2>WHAT WE DO</h2>
-			</div>
-			
-			<div class="section">
-				<h2>Gallery</h2>
-				<div class="slide" data-anchor="slide1"> <img data-src="http://www.start-cleaning-business.com/images/cleaning-business-consultant.jpg" alt="pict" width="800" height="500"> </div>
-				<div class="slide" data-anchor="slide2">
-					<img src="https://image.freepik.com/free-vector/creative-brain_23-2147505295.jpg" alt="ya"> 
-				</div>
-				<div class="slide" data-anchor="slide3"> <img src="{{ url_for('static', filename='img/animal.gif') }}" alt="ya">  </div>
-				<div class="slide" data-anchor="slide4"> Slide 4 </div>
-			</div>
-			
-			<div class="section">
-				<h2>Contact Us</h2>
-				<form method="post" action="/send_feedback" id="form">
-					{{ form.full_name}}
-					{{ form.subject}}
-					{{ form.email}}
-					{{ form.body}}
-					<p><input type="submit" value="Send it!"></p>
-					</form>
-			</div>
-		</div>	
-	</div>
-	
-	
+	Hello we are from redpanda!
 </body>
 <!-- JS -->	
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
