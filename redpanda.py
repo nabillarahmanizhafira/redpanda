@@ -4,6 +4,8 @@ from flask import render_template
 from flask import request
 from flask import url_for
 from flask_dotenv import DotEnv
+from werkzeug.utils import secure_filename
+import os
 
 def create_app():
 	env = DotEnv()
@@ -38,9 +40,18 @@ def create_app():
 		"""
 		return render_template('500.html', title='RedPanda internal server error', current_page='500')
 
-	@app.route("/gallery", methods=["GET"])
+	@app.route("/gallery", methods=["GET", "POST"])
 	def gallery():
-		return render_template('gallery.html', title='Gallery', current_page='Gallery')
+		if request.method == "GET":
+			list_files = os.listdir("static/img/upload")
+			return render_template('gallery.html', title='Gallery', current_page='Gallery', list_files=list_files)
+		elif request.method == "POST":
+			file = request.files['file']
+			caption = request.form.get('caption')
+			filename = secure_filename('upl_' + caption + '_' + file.filename)
+			file.save(os.path.join('static/img/upload', filename))
+			return redirect('/gallery')
+
 
 	@app.route("/reproduction", methods=["GET"])
 	def reproduction():
@@ -53,7 +64,6 @@ def create_app():
 	@app.route("/behavior", methods=["GET"])
 	def behavior():
 		return render_template('behavior.html', title='Behavior', current_page='Behavior')
-
 
 	return app
 
