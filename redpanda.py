@@ -44,7 +44,15 @@ def create_app():
 
 	@app.route("/reproduction", methods=["GET"])
 	def reproduction():
-		return render_template('reproduction.html', title='Gallery', current_page='Reproduction')
+		return render_template('reproduction.html', title='Reproduction', current_page='Reproduction')
+
+	@app.route("/habitat", methods=["GET"])
+	def habitat():
+		return render_template('habitat.html', title='Habitat', current_page='Habitat')
+
+	@app.route("/behavior", methods=["GET"])
+	def behavior():
+		return render_template('behavior.html', title='Behavior', current_page='Behavior')
 
 
 	return app
