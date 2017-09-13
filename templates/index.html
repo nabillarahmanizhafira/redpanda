@@ -7,37 +7,37 @@
 	<meta name="description" content="" />
 	<meta name="keywords"  content=""/>
 	<meta name="Resource-type" content="Document"/>
+	<link rel=icon href="{{ url_for('static', filename='img/panda-favico.png') }}">
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<!-- CSS -->
-	<link href="{{ url_for('static', filename='css/jquery.fullPage.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='css/loading.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 </head>
 <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="/" style="padding:0px; margin-left:10px; margin-right:10px;"><img src="{{ url_for('static', filename='img/logo.png') }}" style="width:auto; height:auto; max-height:50px; max-widht:50px; padding:0px;"></img></a>
+			</div>
+			<ul class="nav navbar-nav">
+			<li><a href="/gallery">Gallery</a></li>
+			<li><a href="/reproduction">Mating and Reproduction</a></li>
+			<li><a href="/habitat">Habitat</a></li>
+			</ul>
+		</div>
+		</nav>
+
 	<div class="container">
-		<div class="row" style="margin:auto; width:300px;">
-			<img src="{{ url_for('static', filename='img/logo.png') }}"></img>
+		<div class="row vid" style="margin:auto; width:300px;">
+			<iframe width="560" height="315" src="//www.youtube.com/embed/b6dT4kyVUuY" allowfullscreen="" style="margin-top:75px;"></iframe>
 		</div>	
 	</div>
 </body>
-<!-- JS -->	
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.fullPage.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.fullPage.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
-<!-- JS -->	
-<script type="text/javascript">
-	
-</script>
-<script>
-	new WOW().init();
-</script>
 </html>

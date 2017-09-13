@@ -7,6 +7,7 @@ from flask_dotenv import DotEnv
 from werkzeug.utils import secure_filename
 import os
 
+
 def create_app():
 	env = DotEnv()
 	app = Flask(__name__)
